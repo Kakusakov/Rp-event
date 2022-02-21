@@ -1,1 +1,5 @@
-Репозиторий: | repository: https://github.com/Kakusakov/Rp-event
+Репозиторий: https://github.com/Kakusakov/Rp-event
+
+1. Любой тест приложения приветствуется, буду очень благодарен за любой фидбэк.
+
+2. Большую часть разработки я предпочитаю выполнять самостоятельно, но если хотите помочь, то можете писать в раздел "issues" на gitHub: https://github.com/Kakusakov/Rp-event/issues .
