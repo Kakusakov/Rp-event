@@ -10,10 +10,10 @@
 HINSTANCE hInst;                                // текущий экземпляр
 WCHAR szTitle[MAX_LOADSTRING];                  // Текст строки заголовка
 WCHAR szWindowClass[MAX_LOADSTRING];            // имя класса главного окна
+HWND hInputField;
+HWND hPrompt;
+HWND hButton;
 
-// OPTIMIZATION VARIABLES START
-
-// OPTIMIZATION VARIABLES END
 
 
 // Отправить объявления функций, включенных в этот модуль кода:
@@ -31,7 +31,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     // TODO: Разместите код здесь.
-    
 
     // Инициализация глобальных строк
     LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
@@ -130,37 +129,33 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     //RedrawWindow(hWnd, NULL, NULL, RDW_INVALIDATE | RDW_ERASE);
-    RECT rect = { 5, 5, 100, 100 };
+    //RECT rect = { 5, 5, 100, 100 };
     //TCHAR greeting1[] = _T("русский текст: русский текст");
     //TCHAR greeting2[] = _T("переменная:");
-    grid_identifier foo = { 12, 8, 75 };
-    RECT r1;
-    int var1 = 1337;
-    std::wstring a = std::to_wstring(var1);
+    grid_identifier GB_grid = { 12, 8, 50 };
+    RECT r_temp;
+    //int var1 = 1337;
+    //std::wstring a = std::to_wstring(var1);
 
-    const unsigned int x_max = 12;
-    const unsigned int y_max = 8;
-    const int colour_map[y_max][x_max] = {
-        {1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-        {0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-        {1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1}
-    };
     
     switch (message)
     {
+    case WM_CREATE:
+        BootData(hWnd);
+        create_input_box(hWnd, &::hButton, &::hInputField, &::hPrompt, 325, 500);
+        break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
             // Разобрать выбор в меню:
             switch (wmId)
             {
+            case 2:
+                MakeTurn(hWnd, get_input_field_value(::hInputField));
+                update_info(hWnd);
+                break;
             case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                DialogBox(::hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
@@ -177,24 +172,28 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             // TODO: Добавьте сюда любой код прорисовки, использующий HDC...
             
             HBRUSH hWallBrush = CreateSolidBrush(RGB(128, 128, 128));
-            HBITMAP image = (HBITMAP)LoadImage(NULL, L"g:\sans.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
-            if (image == NULL) MessageBox(0, L"Couldn't load the image", L"Error", MB_OK | MB_ICONERROR);
-            HBRUSH hCharBrush = CreatePatternBrush(image);
-            //HBRUSH hBrush = static_cast<HBRUSH>(SelectObject(hdc, hCharBrush));
+            //HBRUSH hCharBrush = CreateSolidBrush(RGB(255, 0, 0));
+            //HBITMAP image = (HBITMAP)LoadImage(NULL, L"g:\\sans.bmp", IMAGE_BITMAP, 0, 0, LR_LOADFROMFILE);
+            //if (image == NULL) MessageBox(0, L"Couldn't load the image", L"Error", MB_OK | MB_ICONERROR);
+            //else hCharBrush = CreatePatternBrush(image);
             
             for (int x = 0; x < x_max; x++) {
                 for (int y = 0; y < y_max; y++) {
-                    if (colour_map[y][x] == 1) {
-                        r1 = get_square_from_grid(foo, x + 1, y + 1);
-                        FillRect(hdc, &r1, hWallBrush);
+                    int this_sq_id_temp = ::GameBoard[y][x];
+                    if (this_sq_id_temp == 1) {
+                        r_temp = get_square_from_grid(GB_grid, x + 1, y + 1);
+                        FillRect(hdc, &r_temp, hWallBrush);
                     }
-                    else if (colour_map[y][x] == 2) {
-                        r1 = get_square_from_grid(foo, x + 1, y + 1);
-                        FillRect(hdc, &r1, hCharBrush);
+                    else if (this_sq_id_temp != 0 && BattleMembers[this_sq_id_temp - 2].get_hp() > 0) {
+                        r_temp = get_square_from_grid(GB_grid, x + 1, y + 1);
+                        FillRect(hdc, &r_temp, ::character_hBrushes[this_sq_id_temp - 2]);
                     }
                 }
             }
-            draw_line_grid(hdc, foo);
+            draw_line_grid(hdc, GB_grid);
+            every_print_character_data(hdc, 700, 50);
+            PrintTurnOrder(hdc, 700, 500);
+            /*
             TextOut(hdc,
                 5, 5,
                 greeting1, _tcslen(greeting1));
@@ -206,6 +205,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             TextOut(hdc,
                 110, 20,
                 a.c_str(), a.length());
+            */
 
 
             //SelectObject(hdc, hBrush);

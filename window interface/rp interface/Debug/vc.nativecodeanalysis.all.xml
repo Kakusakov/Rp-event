@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>194</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>YofGameBoardById</FUNCTION>
+    <DECORATED>?YofGameBoardById@@YAHH@Z</DECORATED>
+    <FUNCLINE>184</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>210</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>XofGameBoardById</FUNCTION>
+    <DECORATED>?XofGameBoardById@@YAHH@Z</DECORATED>
+    <FUNCLINE>199</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>560</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>TeamVictory</FUNCTION>
+    <DECORATED>?TeamVictory@@YAHXZ</DECORATED>
+    <FUNCLINE>542</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>573</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>TeamVictory</FUNCTION>
+    <DECORATED>?TeamVictory@@YAHXZ</DECORATED>
+    <FUNCLINE>542</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>640</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Чтение недопустимых данных из "GameBoard[CurrentY]":  доступный для чтения объем равен "48" байт, однако считать можно только "-4" байт.</DESCRIPTION>
+    <FUNCTION>IsValidMovement</FUNCTION>
+    <DECORATED>?IsValidMovement@@YAH_WHHH@Z</DECORATED>
+    <FUNCLINE>613</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>631</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>633</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&lt;1&amp;&amp;Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>634</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&gt;6&amp;&amp;Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>635</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&lt;1&amp;&amp;Move==97" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>636</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&gt;10&amp;&amp;Move==100" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>638</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>639</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>640</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в эту ветвь (предполагается "Move==97")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>640</LINE>
+        <COLUMN>39</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>использование</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Недопустимая операция чтения из "GameBoard[CurrentY][-1]" (доступный для чтения диапазон: от 0 до 11)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>641</LINE>
+      <COLUMN>39</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Чтение недопустимых данных из "GameBoard[CurrentY]":  доступный для чтения объем равен "48" байт, однако считать можно только "52" байт.</DESCRIPTION>
+    <FUNCTION>IsValidMovement</FUNCTION>
+    <DECORATED>?IsValidMovement@@YAH_WHHH@Z</DECORATED>
+    <FUNCLINE>613</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>631</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>633</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&lt;1&amp;&amp;Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>634</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&gt;6&amp;&amp;Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>635</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&lt;1&amp;&amp;Move==97" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>636</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&gt;10&amp;&amp;Move==100" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>638</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>639</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>640</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==97" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>641</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в эту ветвь (предполагается "Move==100")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>641</LINE>
+        <COLUMN>39</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>использование</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Недопустимая операция чтения из "GameBoard[CurrentY][12]" (доступный для чтения диапазон: от 0 до 11)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>650</LINE>
+      <COLUMN>8</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Использование неинициализированной памяти "ThisSquareId".</DESCRIPTION>
+    <FUNCTION>IsValidMovement</FUNCTION>
+    <DECORATED>?IsValidMovement@@YAH_WHHH@Z</DECORATED>
+    <FUNCLINE>613</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>631</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>объявление</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Инициализация "ThisSquareId" не выполнена</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>633</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&lt;1&amp;&amp;Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>634</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentY&gt;6&amp;&amp;Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>635</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&lt;1&amp;&amp;Move==97" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>636</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "CurrentX&gt;10&amp;&amp;Move==100" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>638</LINE>
+        <COLUMN>13</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==119" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>639</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==115" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>640</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==97" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>641</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "Move==100" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>645</LINE>
+        <COLUMN>70</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>645</LINE>
+        <COLUMN>68</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>645</LINE>
+        <COLUMN>87</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>645</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>648</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>650</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>650</LINE>
+        <COLUMN>8</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>использование</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>"ThisSquareId" используется, но, возможно, не инициализировано</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>645</LINE>
+      <COLUMN>17</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>IsValidMovement</FUNCTION>
+    <DECORATED>?IsValidMovement@@YAH_WHHH@Z</DECORATED>
+    <FUNCLINE>613</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>903</LINE>
+      <COLUMN>62</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Чтение недопустимых данных из "BattleMembers":  доступный для чтения объем равен "672" байт, однако считать можно только "-252" байт.</DESCRIPTION>
+    <FUNCTION>ProcessInput</FUNCTION>
+    <DECORATED>?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z</DECORATED>
+    <FUNCLINE>680</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>884</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>объявление</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>"BattleMembers" является выходными данными из "character::get_name" (объявлено в строке 142)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>683</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>684</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>685</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>686</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>687</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>688</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>689</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>690</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>691</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>692</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>693</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>694</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>696</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>696</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>695</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>18</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>704</LINE>
+        <COLUMN>40</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>707</LINE>
+        <COLUMN>29</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>715</LINE>
+        <COLUMN>26</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>719</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>720</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>721</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>722</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>729</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "c==32" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>732</LINE>
+        <COLUMN>53</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "c==119||c==97||c==115||c==100" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>785</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "c==101" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>824</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в эту ветвь (предполагается "c==113")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>831</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>832</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в этот цикл (предполагается "1")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>833</LINE>
+        <COLUMN>58</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>839</LINE>
+        <COLUMN>54</COLUMN>
+        <KEYEVENT>
+          <ID>11</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>848</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>849</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>850</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>850</LINE>
+        <COLUMN>49</COLUMN>
+        <KEYEVENT>
+          <ID>12</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить этот цикл (предполагается, что "k&lt;=length" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>870</LINE>
+        <COLUMN>30</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>873</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>30</COLUMN>
+        <KEYEVENT>
+          <ID>13</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в этот цикл (предполагается "k&lt;=8")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>875</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>14</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "k==8" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>884</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>15</ID>
+          <KIND>объявление</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>"BattleMembers" является выходными данными из "character::get_name" (объявлено в строке 142)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>885</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>888</LINE>
+        <COLUMN>35</COLUMN>
+        <KEYEVENT>
+          <ID>16</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "==(PossibleTarget, Target)" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>884</LINE>
+        <COLUMN>39</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>892</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>37</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>30</COLUMN>
+        <KEYEVENT>
+          <ID>17</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Войти в этот цикл (предполагается "k&lt;=8")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>875</LINE>
+        <COLUMN>22</COLUMN>
+        <KEYEVENT>
+          <ID>18</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "k==8" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>884</LINE>
+        <COLUMN>24</COLUMN>
+        <KEYEVENT>
+          <ID>19</ID>
+          <KIND>объявление</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>"BattleMembers" является выходными данными из "character::get_name" (объявлено в строке 142)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>885</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>888</LINE>
+        <COLUMN>35</COLUMN>
+        <KEYEVENT>
+          <ID>20</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "==(PossibleTarget, Target)" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>884</LINE>
+        <COLUMN>39</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>892</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>37</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>874</LINE>
+        <COLUMN>30</COLUMN>
+        <KEYEVENT>
+          <ID>21</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Продолжить этот цикл (предполагается "k&lt;=8")</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>893</LINE>
+        <COLUMN>25</COLUMN>
+        <KEYEVENT>
+          <ID>22</ID>
+          <KIND>ветвь</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Пропустить эту ветвь (предполагается, что "&lt;условие ветви&gt;" равно false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>903</LINE>
+        <COLUMN>78</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>903</LINE>
+        <COLUMN>50</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>903</LINE>
+        <COLUMN>62</COLUMN>
+        <KEYEVENT>
+          <ID>23</ID>
+          <KIND>объявление</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>"BattleMembers" является выходными данными из "character::get_team" (объявлено в строке 136)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+        <FILENAME>rp_core.h</FILENAME>
+        <LINE>903</LINE>
+        <COLUMN>62</COLUMN>
+        <KEYEVENT>
+          <ID>24</ID>
+          <KIND>использование</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Недопустимая операция чтения из "BattleMembers[-3]" (доступный для чтения диапазон: от 0 до 7)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>781</LINE>
+      <COLUMN>29</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>ProcessInput</FUNCTION>
+    <DECORATED>?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z</DECORATED>
+    <FUNCLINE>680</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>747</LINE>
+      <COLUMN>33</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>ProcessInput</FUNCTION>
+    <DECORATED>?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z</DECORATED>
+    <FUNCLINE>680</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\anush\source\repos\rp event\rp interface\</FILEPATH>
+      <FILENAME>rp_core.h</FILENAME>
+      <LINE>1504</LINE>
+      <COLUMN>21</COLUMN>
+    </SFA>
+    <DEFECTCODE>26815</DEFECTCODE>
+    <DESCRIPTION>Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен.</DESCRIPTION>
+    <FUNCTION>MakeTurn</FUNCTION>
+    <DECORATED>?MakeTurn@@YAXV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z</DECORATED>
+    <FUNCLINE>1481</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>

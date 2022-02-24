@@ -1,0 +1,2192 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 194,
+                  "startColumn": 18,
+                  "endLine": 194,
+                  "endColumn": 105
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?YofGameBoardById@@YAHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 210,
+                  "startColumn": 18,
+                  "endLine": 210,
+                  "endColumn": 105
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?XofGameBoardById@@YAHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 560,
+                  "startColumn": 22,
+                  "endLine": 560,
+                  "endColumn": 106
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?TeamVictory@@YAHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 573,
+                  "startColumn": 22,
+                  "endLine": 573,
+                  "endColumn": 106
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?TeamVictory@@YAHXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "Чтение недопустимых данных из \"GameBoard[CurrentY]\":  доступный для чтения объем равен \"48\" байт, однако считать можно только \"-4\" байт."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 640,
+                  "startColumn": 27,
+                  "endLine": 640,
+                  "endColumn": 76
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?IsValidMovement@@YAH_WHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 631,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 633,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY<1&&Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 634,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY>6&&Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 635,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX<1&&Move==97\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 636,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX>10&&Move==100\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 638,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 639,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в эту ветвь (предполагается \"Move==97\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 40
+                          }
+                        },
+                        "message": {
+                          "text": "Недопустимая операция чтения из \"GameBoard[CurrentY][-1]\" (доступный для чтения диапазон: от 0 до 11)"
+                        }
+                      },
+                      "kinds": [
+                        "использование"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "Чтение недопустимых данных из \"GameBoard[CurrentY]\":  доступный для чтения объем равен \"48\" байт, однако считать можно только \"52\" байт."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 641,
+                  "startColumn": 27,
+                  "endLine": 641,
+                  "endColumn": 76
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?IsValidMovement@@YAH_WHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 631,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 633,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY<1&&Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 634,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY>6&&Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 635,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX<1&&Move==97\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 636,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX>10&&Move==100\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 638,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 639,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==97\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 641,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в эту ветвь (предполагается \"Move==100\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 641,
+                            "startColumn": 40
+                          }
+                        },
+                        "message": {
+                          "text": "Недопустимая операция чтения из \"GameBoard[CurrentY][12]\" (доступный для чтения диапазон: от 0 до 11)"
+                        }
+                      },
+                      "kinds": [
+                        "использование"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6001",
+          "message": {
+            "text": "Использование неинициализированной памяти \"ThisSquareId\"."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 650,
+                  "startColumn": 9,
+                  "endLine": 650,
+                  "endColumn": 9
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?IsValidMovement@@YAH_WHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 631,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Инициализация \"ThisSquareId\" не выполнена"
+                        }
+                      },
+                      "kinds": [
+                        "объявление"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 633,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY<1&&Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 634,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentY>6&&Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 635,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX<1&&Move==97\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 636,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"CurrentX>10&&Move==100\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 638,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==119\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 639,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==115\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 640,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==97\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 641,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"Move==100\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 645,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 645,
+                            "startColumn": 69
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 645,
+                            "startColumn": 88
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 645,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 648,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 650,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 650,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "\"ThisSquareId\" используется, но, возможно, не инициализировано"
+                        }
+                      },
+                      "kinds": [
+                        "использование"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 645,
+                  "startColumn": 18,
+                  "endLine": 645,
+                  "endColumn": 102
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?IsValidMovement@@YAH_WHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6385",
+          "message": {
+            "text": "Чтение недопустимых данных из \"BattleMembers\":  доступный для чтения объем равен \"672\" байт, однако считать можно только \"-252\" байт."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 903,
+                  "startColumn": 24,
+                  "endLine": 903,
+                  "endColumn": 88
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 884,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "\"BattleMembers\" является выходными данными из \"character::get_name\" (объявлено в строке 142)"
+                        }
+                      },
+                      "kinds": [
+                        "объявление"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 683,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 684,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 685,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 686,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 687,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 688,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 689,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 690,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 691,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 692,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 693,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 694,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 696,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 696,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 695,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 701,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 701,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 704,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 707,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 715,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 719,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 720,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 721,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 722,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 726,
+                            "startColumn": 11
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 729,
+                            "startColumn": 15
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"c==32\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 732,
+                            "startColumn": 54
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"c==119||c==97||c==115||c==100\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 785,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"c==101\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 824,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в эту ветвь (предполагается \"c==113\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 831,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 832,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в этот цикл (предполагается \"1\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 833,
+                            "startColumn": 59
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 839,
+                            "startColumn": 55
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 848,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 849,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 850,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 850,
+                            "startColumn": 50
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить этот цикл (предполагается, что \"k<=length\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 870,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 873,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в этот цикл (предполагается \"k<=8\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 875,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"k==8\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 884,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "\"BattleMembers\" является выходными данными из \"character::get_name\" (объявлено в строке 142)"
+                        }
+                      },
+                      "kinds": [
+                        "объявление"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 885,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 888,
+                            "startColumn": 36
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"==(PossibleTarget, Target)\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 884,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 892,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "Войти в этот цикл (предполагается \"k<=8\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 875,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"k==8\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 884,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "\"BattleMembers\" является выходными данными из \"character::get_name\" (объявлено в строке 142)"
+                        }
+                      },
+                      "kinds": [
+                        "объявление"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 885,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 888,
+                            "startColumn": 36
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"==(PossibleTarget, Target)\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 884,
+                            "startColumn": 40
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 892,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 874,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "Продолжить этот цикл (предполагается \"k<=8\")"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 893,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Пропустить эту ветвь (предполагается, что \"<условие ветви>\" равно false)"
+                        }
+                      },
+                      "kinds": [
+                        "ветвь"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 903,
+                            "startColumn": 79
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 903,
+                            "startColumn": 51
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 903,
+                            "startColumn": 63
+                          }
+                        },
+                        "message": {
+                          "text": "\"BattleMembers\" является выходными данными из \"character::get_team\" (объявлено в строке 136)"
+                        }
+                      },
+                      "kinds": [
+                        "объявление"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                          },
+                          "region": {
+                            "startLine": 903,
+                            "startColumn": 63
+                          }
+                        },
+                        "message": {
+                          "text": "Недопустимая операция чтения из \"BattleMembers[-3]\" (доступный для чтения диапазон: от 0 до 7)"
+                        }
+                      },
+                      "kinds": [
+                        "использование"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 781,
+                  "startColumn": 30,
+                  "endLine": 781,
+                  "endColumn": 125
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 747,
+                  "startColumn": 34,
+                  "endLine": 747,
+                  "endColumn": 129
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?ProcessInput@@YA_NV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26815",
+          "message": {
+            "text": "Это висячий указатель, так как он указывает на временный экземпляр, который был уничтожен."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+                },
+                "region": {
+                  "startLine": 1504,
+                  "startColumn": 22,
+                  "endLine": 1504,
+                  "endColumn": 106
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?MakeTurn@@YAXV?$basic_string@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.29.30038.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\bin\\HostX86\\x86\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00CBC1C0 -il C:\\Users\\anush\\AppData\\Local\\Temp\\_CL_ce6f89b1ast -typedil -f rp interface.cpp -Ze -D_MSC_EXTENSIONS -Zp8 -Gs -pc \\:/ -D_MSC_VER=1929 -D_MSC_FULL_VER=192930038 -D_MSC_BUILD=1 -D_WIN32 -D_M_IX86=600 -D_M_IX86_FP=2 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -DWIN32 -D_DEBUG -D_WINDOWS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -FoDebug\\rp interface.obj -FdDebug\\vc142.pdb -external:W 3 -Gd -analyze:projectdirectory C:\\Users\\anush\\source\\repos\\rp event\\rp interface -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\atlmfc\\include -external:I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -external:I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -external:I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30037\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/anush/source/repos/rp event/rp interface/rp_core.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "dabe238f644d1bc856658c76f88728a2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/anush/source/repos/rp event/rp interface/rp interface.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "fb1ad2e6b8b2a54494237428a68619ec"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/anush/source/repos/rp event/rp interface/framework.h"
+          },
+          "hashes": {
+            "md5": "73f836f00a4b2d57b01ed4252defc6d5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/anush/source/repos/rp event/rp interface/targetver.h"
+          },
+          "hashes": {
+            "md5": "ffdd3e87b0f855b118c3542888f6c33c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/anush/source/repos/rp event/rp interface/rp interface.h"
+          },
+          "hashes": {
+            "md5": "eff897a9a13087524a6e4c936d45235f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/anush/source/repos/rp event/rp interface/resource.h"
+          },
+          "hashes": {
+            "md5": "f1c4236cc24c3230b8804765c436ce16"
+          }
+        }
+      ]
+    }
+  ]
+}
