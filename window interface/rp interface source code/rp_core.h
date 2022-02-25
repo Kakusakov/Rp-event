@@ -23,7 +23,7 @@
 
                 //////////////////////////////////////////////////////////
            ///////////////////                           ///////////////////
-      ///////////////////    GAME VERSION 1.1 - INTERFACE    ///////////////////
+      ///////////////////    GAME VERSION 1.2 - INTERFACE    ///////////////////
            ///////////////////                           ///////////////////
                 //////////////////////////////////////////////////////////
 
@@ -724,7 +724,7 @@ bool ProcessInput(std::wstring TurnDescription) {
 
     //string TurnDescription;  // whatever player typed to describe his turn.
     //cin >> TurnDescription;
-    for (wchar_t &c : TurnDescription) {
+    for (wchar_t& c : TurnDescription) {
         // This checks if turn is valid, and, if it is, gets ready to
         // pass data to the part whrere it gets executed.
         if (ErrorInInputOccured == true || TurnSkiped == true) {
@@ -754,6 +754,7 @@ bool ProcessInput(std::wstring TurnDescription) {
 
         if (c == L' ') {
             CharIndexCounter++;
+            //UnskipedChars++;
         }
         else if (c == L'w' || c == L'a' || c == L's' || c == L'd') {
             // If c represents movement / skip
@@ -772,11 +773,13 @@ bool ProcessInput(std::wstring TurnDescription) {
                     //cout << "\n\nERROR in ProcessInput(): char '" << c << "' does not represent movement\n" << endl;
                     LPCWSTR temp = (L"ERROR in ProcessInput(): char '" + std::to_wstring(c) + L"' does not represent movement").c_str();
                     MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
+                    return false;
                 }
 
 
                 UsedStepsCounter++;
                 CharIndexCounter++;
+                //UnskipedChars++;
             }
             else if (ErrorCode == 1) {
                 ErrorInInputOccured = true;
@@ -785,6 +788,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: персонажи не могут выйти за пределы карты";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
+                return false;
             }
             else if (ErrorCode == 2) {
                 ErrorInInputOccured = true;
@@ -793,6 +797,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: нет, через стены проходить нельзя";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
+                return false;
             }
             else if (ErrorCode == 3) {
                 ErrorInInputOccured = true;
@@ -801,11 +806,13 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: нельзя проходить через других персонажей";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
+                return false;
             }
             else {
                 //cout << "\n\nERROR in ProcessInput(): ErrorCode has incorrect value of " << ErrorCode << "\n" << endl;
                 LPCWSTR temp = (L"ERROR in ProcessInput(): ErrorCode has incorrect value of " + std::to_wstring(ErrorCode)).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
+                return false;
             }
         }
         else if (c == L'e') {
@@ -846,6 +853,7 @@ bool ProcessInput(std::wstring TurnDescription) {
             }
             UsedStepsCounter++;
             CharIndexCounter++;
+            //UnskipedChars++;
         }
         else if (c == L'q') {
             /*
@@ -869,7 +877,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: после каждой \'q\' нужно указать имя в круглых скобках";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                break;
+                return false;
             }
             int length = TurnDescription.length();
             int TargetSize = 0;
@@ -881,7 +889,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                     std::wstring t1 = L"Ошибка: все скобки, содержащие имя, должны быть закрты";
                     LPCWSTR temp = (t1).c_str();
                     MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                    break;
+                    return false;
                 }
                 wchar_t Stuff = TurnDescription[k];
                 if (Stuff != L')') {
@@ -902,10 +910,10 @@ bool ProcessInput(std::wstring TurnDescription) {
                     ErrorInInputOccured = true;
                     //cout << "Ошибка: нет персонажей указанным именем" << endl;
                     //cout << "Пожалуйста введи ход:" << endl;
-                    std::wstring t1 = L"Ошибка: нет персонажей указанным именем";
+                    std::wstring t1 = L"Ошибка: нет персонажей c указанным именем";
                     LPCWSTR temp = (t1).c_str();
                     MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                    break;
+                    return false;
                 }
                 std::wstring PossibleTarget = ::BattleMembers[k].get_name();
                 for (wchar_t& d : PossibleTarget) {
@@ -923,8 +931,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: не пытайся застрелиться. Пожалуйста. Ты нам нужен.";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                break;
-                break;
+                return false;
             }
             else if (::BattleMembers[TargetId - 2].get_team() == ThisCharacter.get_team()) {
                 ErrorInInputOccured = true;
@@ -933,7 +940,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                 std::wstring t1 = L"Ошибка: стрелять по своим - плохая идея";
                 LPCWSTR temp = (t1).c_str();
                 MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                break;
+                return false;
             }
             else {
                 /*
@@ -945,9 +952,14 @@ bool ProcessInput(std::wstring TurnDescription) {
                 */
                 int TargetY = YofGameBoardById(TargetId);
                 int TargetX = XofGameBoardById(TargetId);
-                int DeltaY = TargetY - CurrentY; 
-                int DeltaX = TargetX - CurrentX; 
-                float Slope;
+                int DeltaY = TargetY - CurrentY;
+                int DeltaX = TargetX - CurrentX;
+                double dx_per_dy = FixFPError((DeltaY != 0) ? DeltaX / DeltaY : 1337);
+                double dy_per_dx = FixFPError((DeltaX != 0) ? DeltaY / DeltaX : 1337);
+                int dx = 0;
+                int dy = 0;
+                double s_x = FixFPError(CurrentX + 0.5 + ((DeltaY > 0) ? dx_per_dy * 0.5 : dx_per_dy * -0.5));
+                double s_y = FixFPError(CurrentY + 0.5 + ((DeltaX > 0) ? dy_per_dx * 0.5 : dy_per_dx * -0.5));
                 bool STWError = false;
                 if (abs(DeltaY) + abs(DeltaX) > ThisCharacter.get_rangeDistance()) {
                     ErrorInInputOccured = true;
@@ -958,6 +970,55 @@ bool ProcessInput(std::wstring TurnDescription) {
                     MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
                     break;
                 }
+                for (
+                    int y = (DeltaY > 0) ? CurrentY + 1 : CurrentY - 1;
+                    (DeltaY > 0) ? y <= TargetY : y >= TargetY;
+                    (DeltaY > 0) ? y++ : y--
+                    ) {
+                    double cx = FixFPError(s_x + dy * dx_per_dy);
+                    if (cx != floorf(cx)) {
+                        if (TempWTF(GameBoard[y][(int)floorf(cx)], ThisCharacter.get_id(), TargetId)) {
+                            STWError = true;
+                            break;
+                        }
+                    }
+                    else {
+                        if (
+                            TempWTF(GameBoard[y][(int)cx], ThisCharacter.get_id(), TargetId)
+                            || TempWTF(GameBoard[y][(DeltaX > 0) ? (int)cx - 1 : (int)cx + 1], ThisCharacter.get_id(), TargetId)
+                            ) {
+                            STWError = true;
+                            break;
+                        }
+                    }
+                    dy++;
+                }
+                for (
+                    int x = (DeltaX > 0) ? CurrentX + 1 : CurrentX - 1;
+                    (DeltaX > 0) ? x <= TargetX : x >= TargetX;
+                    (DeltaX > 0) ? x++ : x--
+                    ) {
+                    double cy = (s_y + dx * dy_per_dx);
+                    if (cy != floorf(cy)) {
+                        if (TempWTF(GameBoard[(int)floorf(cy)][x], ThisCharacter.get_id(), TargetId)) {
+                            STWError = true;
+                            break;
+                        }
+                    }
+                    else {
+                        if (
+                            TempWTF(GameBoard[(int)cy][x], ThisCharacter.get_id(), TargetId)
+                            || TempWTF(GameBoard[(int)cy][(DeltaY > 0) ? (int)cy - 1 : (int)cy + 1], ThisCharacter.get_id(), TargetId)
+                            ) {
+                            STWError = true;
+                            break;
+                        }
+                    }
+                    dx++;
+                }
+                /*float Slope;
+
+
                 else if (DeltaY == 0) {
                     int FooSign = (DeltaX > 0) ? 1 : -1;
                     int DeltaFoo = DeltaX * FooSign;
@@ -991,14 +1052,14 @@ bool ProcessInput(std::wstring TurnDescription) {
                     }
                 }
                 else {
-                    int XInv = (DeltaX > 0) ? 1 : -1;
-                    int YInv = (DeltaY > 0) ? 1 : -1;
-                    Slope = (float)DeltaX * XInv / (float)DeltaY * YInv;
+                    int XInv = (DeltaX > 0) ? 1 : -1;  // -1
+                    int YInv = (DeltaY > 0) ? 1 : -1;  // -1
+                    Slope = (float)DeltaX * XInv / (float)DeltaY * YInv;  // 0.5
                     int Temp1;
                     int Temp2;
                     int Temp3;
                     int y;
-                    float x = FixFPError(0.5 + Slope / 2);
+                    float x = FixFPError(0.5 + Slope / 2);  // 0.75
                     for (y = 1; y <= ( DeltaY * YInv ); y++) {
                         if (Slope == 1) {
                             Temp1 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
@@ -1020,7 +1081,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                                 //Temp3 = GameBoard[((int)floorf(x) - 1) * XInv + CurrentY][y * YInv + CurrentX];
                             }
                             else if (Slope < 1) {
-                                    
+
                                 Temp1 = GameBoard[y * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
                                 Temp2 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
                                 //Temp3 = GameBoard[y * YInv + CurrentY][((int)floorf(x) - 1) * XInv + CurrentX];
@@ -1036,7 +1097,7 @@ bool ProcessInput(std::wstring TurnDescription) {
                                 break;
                             }
                             //}
-                            /*else {
+                            else {
                                 if (Slope > 1) {
                                     Temp1 = GameBoard[y * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
                                     Temp2 = GameBoard[y * YInv + CurrentY][((int)floorf(x) - 1) * XInv + CurrentX];
@@ -1053,52 +1114,50 @@ bool ProcessInput(std::wstring TurnDescription) {
                                     STWError = true;
                                     break;
                                 }
-                            }*/
-                        }
-                        else {
-                            //if (y != 1) {
-                            if (Slope >= 1) {
-                                Temp1 = GameBoard[y * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
-                                Temp2 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
                             }
-                            else if (Slope < 1) {
-                                Temp1 = GameBoard[(int)floorf(x) * XInv + CurrentY][y * YInv + CurrentX];
-                                Temp2 = GameBoard[(int)floorf(x) * XInv + CurrentY][(y - 1) * YInv + CurrentX];
                             }
-                            if (
-                                TempWTF(Temp1, ThisCharacter.get_id(), TargetId)
-                                ||
-                                TempWTF(Temp2, ThisCharacter.get_id(), TargetId)
-                                ) {
-                                STWError = true;
-                                break;
-                            }
-                            //}
-                            /*else {
+                            else {
+                                //if (y != 1) {
                                 if (Slope > 1) {
                                     Temp1 = GameBoard[y * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
+                                    Temp2 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
                                 }
                                 else if (Slope < 1) {
                                     Temp1 = GameBoard[(int)floorf(x) * XInv + CurrentY][y * YInv + CurrentX];
+                                    Temp2 = GameBoard[(int)floorf(x) * XInv + CurrentY][(y - 1) * YInv + CurrentX];
                                 }
-                                if (TempWTF(Temp1, ThisCharacter.get_id())) {
+                                if (
+                                    TempWTF(Temp1, ThisCharacter.get_id(), TargetId)
+                                    ||
+                                    TempWTF(Temp2, ThisCharacter.get_id(), TargetId)
+                                    ) {
                                     STWError = true;
                                     break;
                                 }
-                            }*/
+                                //}
+                                else {
+                                    if (Slope > 1) {
+                                        Temp1 = GameBoard[y * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
+                                    }
+                                    else if (Slope < 1) {
+                                        Temp1 = GameBoard[(int)floorf(x) * XInv + CurrentY][y * YInv + CurrentX];
+                                    }
+                                    if (TempWTF(Temp1, ThisCharacter.get_id())) {
+                                        STWError = true;
+                                        break;
+                                    }
+                                }
+                                }
+                            x = FixFPError(Slope + x);
                         }
-                        x = FixFPError(Slope + x);
-                    }
-                    
-                    /*else {
-                        Temp1 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
-                        if (TempWTF(Temp1, ThisCharacter.get_id())
-                            ) {
-                            STWError = true;
-                            // break will cause bug.
-                        }
-                    }*/
-                }
+                        else {
+                            Temp1 = GameBoard[(y - 1) * YInv + CurrentY][(int)floorf(x) * XInv + CurrentX];
+                            if (TempWTF(Temp1, ThisCharacter.get_id())
+                                ) {
+                                STWError = true;
+                                // break will cause bug.
+                            }
+                        }*/
                 if (STWError == true) {
                     ErrorInInputOccured = true;
                     //cout << "Ошибка: нельзя стрелять через стены или других персонажей" << endl;
@@ -1106,25 +1165,26 @@ bool ProcessInput(std::wstring TurnDescription) {
                     std::wstring t1 = L"Ошибка: нельзя стрелять через стены или других персонажей";
                     LPCWSTR temp = (t1).c_str();
                     MessageBox(0, temp, L"Error", MB_OK | MB_ICONERROR);
-                    break;
+                    return false;
                 }
-                int BMPos = TargetId - 2;
-                if (ThisCharacter.get_allianceId() / 3 == ::BattleMembers[BMPos].get_allianceId() / 3) {
-                    if ((ThisCharacter.get_allianceId() + 1) % 3 == ::BattleMembers[BMPos].get_allianceId() % 3) {
-                        ::Damage[BMPos] += (ThisCharacter.get_rangeDmg() + 2) * repeatedQs;
-                    }
-                    else if ((ThisCharacter.get_allianceId() - 1) % 3 == ::BattleMembers[BMPos].get_allianceId() % 3) {
-                        ::Damage[BMPos] += (ThisCharacter.get_rangeDmg() - 2) * repeatedQs;
-                    }
-                    else {
-                        ::Damage[BMPos] += ThisCharacter.get_rangeDmg() * repeatedQs;
-                    }
+            }
+            int BMPos = TargetId - 2;
+            if (ThisCharacter.get_allianceId() / 3 == ::BattleMembers[BMPos].get_allianceId() / 3) {
+                if ((ThisCharacter.get_allianceId() + 1) % 3 == ::BattleMembers[BMPos].get_allianceId() % 3) {
+                    ::Damage[BMPos] += (ThisCharacter.get_rangeDmg() + 2) * repeatedQs;
+                }
+                else if ((ThisCharacter.get_allianceId() - 1) % 3 == ::BattleMembers[BMPos].get_allianceId() % 3) {
+                    ::Damage[BMPos] += (ThisCharacter.get_rangeDmg() - 2) * repeatedQs;
                 }
                 else {
                     ::Damage[BMPos] += ThisCharacter.get_rangeDmg() * repeatedQs;
                 }
             }
-            UsedStepsCounter++;
+            else {
+                ::Damage[BMPos] += ThisCharacter.get_rangeDmg() * repeatedQs;
+            }
+            UsedStepsCounter += repeatedQs;
+            //UnskipedChars++;
         }
         else {
             ErrorInInputOccured = true;
@@ -1133,10 +1193,10 @@ bool ProcessInput(std::wstring TurnDescription) {
             std::wstring t1 = L"Ошибка: неизвестный символ в описании хода";
             PCWSTR temp = (t1).c_str();
             MessageBox(0, temp, L"Error1", MB_OK | MB_ICONERROR);
-            break;
+            return false;
         }
+        
         // commands can be reimplemented using help menue
-            
         /*
         else if (c == '/') {
             ErrorInInputOccured = true;  // Not really an error but used to prevent accidental making of turn
@@ -1196,9 +1256,7 @@ bool ProcessInput(std::wstring TurnDescription) {
             cout << "Пожалуйста введи ход:" << endl;
             break;
         }*/
-        
         UnskipedChars++;
-        
     }
     if (
         ErrorInInputOccured == false

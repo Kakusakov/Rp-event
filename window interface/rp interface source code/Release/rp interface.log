@@ -1,12 +1,21 @@
 ﻿  rp interface.cpp
-C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1000,46): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1367,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1373,19): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(957,55): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(958,55): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(961,56): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(962,56): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(978,48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(979,38): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(980,62): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1002,38): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1003,59): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(747,13): warning C4101: ThisSquareId: неиспользованная локальная переменная
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1428,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\anush\source\repos\rp event\rp interface\rp_core.h(1434,19): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
 C:\Users\anush\source\repos\rp event\rp interface\rp interface.h(11,20): warning C4838: Преобразование из "const unsigned int" в "int" требует сужающего преобразования.
 C:\Users\anush\source\repos\rp event\rp interface\rp interface.h(12,20): warning C4838: Преобразование из "const unsigned int" в "int" требует сужающего преобразования.
   Создание кода
   Создание кода завершено
-  2 of 405 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
+  1 of 405 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   rp interface.vcxproj -> C:\Users\anush\source\repos\rp event\Release\rp interface.exe
